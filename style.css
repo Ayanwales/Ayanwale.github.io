@@ -1,0 +1,218 @@
+*{
+	box-sizing: border-box;
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-image: url(background.png);
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: 100%;
+	line-height: 1;
+}
+
+ header, main, footer, section {
+    display: block;
+
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin: 10px auto;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0 auto 50px;
+}
+
+h1 .hot {
+    color: red;
+    text-shadow: 5px 5px 2px purple;
+}
+
+h1 .cold {
+    color: aqua;
+    text-shadow: 5px 5px 2px navy;
+}
+
+#content {
+    width: 560px;
+    margin: auto;
+}
+
+/****************
+main_column
+****************/
+
+main {
+    float: center;
+    display: flex;
+}
+
+form, #feedback {
+    width: 236px;
+    background: #eee;
+    background: linear-gradient(#eee, gray);
+    padding: 10px;
+    margin: 120px 75px 0;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+}
+
+form {
+    margin: 120px 85px 0;
+}
+
+form label {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#guess {
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid gray;
+    display: block;
+    margin: 20px auto;
+    width: 3em;
+}
+
+#buttons {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+button {
+    font-size: 20px;
+    background: #ddd;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #ccc;
+    background: black;
+}
+#newGame {
+    margin-left: 10px;
+}
+
+#feedback {
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 85px 0;
+}
+
+#feedback_hotter, #feedback_colder, #feedback_guessed, #feedback_neither {
+    display: none;
+}
+
+#feedback .hot {
+    color: purple;
+}
+
+#feedback .cold {
+    color: navy;
+}
+
+
+/****************
+thermometer
+****************/
+
+#thermometer {
+    position: relative;
+    float: center;
+    width: 100px;
+    height: 517px;
+}
+
+#thermometer-case .thermometer-top {
+    height: 23px;
+    width: 46px;
+    border: 2px solid black;
+    border-bottom: none;
+    margin: auto;
+    border-radius: 25px 25px 0 0;
+    background: white;
+}
+
+#thermometer-case .thermometer-middle {
+    position: relative;
+    z-index: 1;
+    height: 400px;
+    width: 46px;
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+    margin: auto;
+    background: white;
+}
+
+#thermometer-case .thermometer-bottom {
+    height: 96px;
+    width: 96px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: -8px auto;
+    background: white;
+}
+
+#thermometer-mercury {
+    position: absolute;
+    bottom: 0;
+}
+
+#thermometer-mercury .thermometer-top {
+    position: absolute;
+    z-index: 1;
+    bottom: 85px;
+    left: 35px;
+    height: 0px;
+    width: 30px;
+    background: red;
+    border-radius: 15px 15px 0 0;
+    animation: mymove 10s;
+}
+@keyframes mymove{
+	from{top:0px;}
+	to{top:300px;}
+}
+#thermometer-mercury .thermometer-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    background: red;
+    border-radius: 40px;
+}
+
+#thermometer-scale {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 25px;
+}
+
+#thermometer-scale div {
+    height: 5px;
+    width: 25px;
+    background: black;
+    margin-top: 60px;
+}

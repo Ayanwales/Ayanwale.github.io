@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta htpp-equiv = "X-UA-compatible" content = "IE = edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Hot or Cold</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><span class="hot">Hot</span> or <span class="cold">cold</span></h1>
+        <h2>Guess the secret number by entering an integer number between 0 and 100</h2>
+    </header>
+        <main>
+            <div id="box-body">
+                <form id="myForm" autocomplete="off">
+                    <label for="guess" >Your guess</label>
+                    <input type="text" name="guess" id="guess" maxlength="3"required>
+                    <div id="buttons">
+                        <!--<button onclick="document.getElementById('buttons').innerHTML = value(0,100)">Submit</button>-->
+                        <button type="button" onclick="myFunction()">Submit</button>
+                        <input type="submit" name="new game" id="newGame" value="New Game">
+                    </div>
+                </form>
+                <div id="feedback">
+                    <p id="feedback_waiting">Waiting for your guess!</p>
+                    <p id="feedback_hotter">Getting hotter!</p>
+                    <p id="feedback_colder">Getting colder!</p>
+                    <p id="feedback_neither">Neither hotter nor colder!
+                    </p>
+                    <p id="feedback_guessed">You guessed it!</p>
+                </div>
+            </div>
+            <div id="thermometer">
+                <div id="thermometer-case">
+                    <div class="thermometer-top"></div>
+                    <div class="thermometer-middle"></div>
+                    <div class="thermometer-bottom"></div>
+                </div>
+                <div id="thermometer-mercury">
+                    <div class="thermometer-top"></div>
+                    <div class="thermometer-bottom"></div>
+                </div>
+                <div id="thermometer-scale">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="application.js"></script>
+    </body>
+</html>
